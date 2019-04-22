@@ -1,2 +1,3 @@
 venv/
 flaskapp/__pycache__
+.vscode/
