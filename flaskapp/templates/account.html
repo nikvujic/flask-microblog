@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="account-window col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-5 col-lg-offset-3">
+        <div class="card">
+            <img class="account-image" src="{{ prof_image }}" alt="No image found">
+            <div class="card-body">
+                <div class="card-info">
+                    <h5><strong>Username:</strong> {{ current_user.username }}</h5>
+                    <h5><strong>Full Name:</strong> {{ current_user.full_name }}</h5>
+                    <h5><strong>Email:</strong> {{ current_user.email }}</h5>
+                    <h5><strong>Post Count:</strong> {{ current_user.posts|length }}</h5>
+                    <h5><strong>Internet Points:</strong> {{ current_user.internet_points }}</h5>
+                    <strong class="card-info-about-strong">About:</strong>
+                    <h5 class="card-info-about">{{ current_user.about }}</h5>
+                </div>
+                <a href="{{ url_for('account_update') }}" class="btn btn-secondary">Chage your info</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,226 @@
+body {
+    background-color: rgb(16, 16, 16);
+}
+
+.navbar-inverse {
+    background-color: rgb(26, 26, 26);
+    border: none;
+    border-radius: 0;
+    font-size: 1.2em;
+}
+
+.register-window {
+    color: rgb(163, 163, 163);
+    font-family: 'Nunito', sans-serif;
+}
+
+.login-window {
+    color: rgb(163, 163, 163);
+    font-family: 'Nunito', sans-serif;
+}
+
+.change-info-window {
+    color: rgb(163, 163, 163);
+    font-family: 'Nunito', sans-serif;
+}
+
+.login-flashed-message {
+    margin-bottom: 10px;
+}
+
+.register-window legend {
+    color: rgb(163, 163, 163);
+}
+
+.login-window legend {
+    color: rgb(163, 163, 163);
+}
+
+.reg-btn {
+    color: white;
+}
+
+.password-field {
+    margin-bottom: 10px;;
+}
+
+.account-window {
+    align-content: center;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid rgb(56, 56, 56) 2px;
+    color: rgb(209, 209, 209);
+    background-color: rgb(44, 44, 44);
+    text-align: center;
+}
+
+.account-image {
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.account-window .btn {
+    color: rgb(179, 179, 179);
+    background-color: rgb(29, 29, 29);
+    border-radius: 10px;
+}
+
+.account-window .btn:hover {
+    color: rgb(255, 68, 0);
+    background-color: rgb(20, 20, 20);
+    border-radius: 10px;
+}
+
+.account-window .card-info {
+    padding: 10px;
+    text-align: left;
+}
+
+.card-info-about {
+    margin-top: 4px;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: rgb(31, 31, 31);
+}
+
+.cancel-button {
+    background-color: rgb(68, 68, 68);
+}
+
+.post {
+    border: solid rgb(12, 12, 12) 1px;
+    color: rgb(206, 206, 206);
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgb(22, 22, 22);
+    padding-top: 12px;
+    padding-bottom: 4px;
+}
+
+.post-content {
+    padding: 0;
+    margin: 0;
+    border-bottom: solid rgb(10, 10, 10) 1px;
+    margin-bottom: 2px;
+    margin-top: -10px;
+    padding-bottom: 10px;
+}
+
+.post img {
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+.post-img {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.post-username {
+    display: inline-block;
+    color: orangered;
+}
+
+.post-username a {
+    color: rgb(179, 179, 179);
+}
+
+.post-username a:hover {
+    color: rgb(255, 68, 0);
+}
+
+.post .btn {
+    color: rgb(179, 179, 179);
+    background-color: rgb(29, 29, 29);
+    padding: 2px;
+    padding-bottom: 4px;
+    margin: 2px;
+    vertical-align: center;
+    border: rgb(19, 19, 19) solid 1px;
+    border-radius: 5px;
+}
+
+.post .btn:hover {
+    color: rgb(255, 68, 0);
+    background-color: rgb(20, 20, 20);
+}
+
+.article-title {
+    color: white;
+    text-decoration: none;
+}
+
+.article-title:hover {
+    color: rgb(255, 68, 0);
+}
+
+.single-post-links .btn {
+    padding: 3px
+}
+
+.single-post-links .edit {
+    margin-left: 20px;
+    font-size: 1.2em;
+    color: rgb(184, 184, 184);
+    background-color: rgb(0, 104, 0);
+}
+
+.single-post-links .delete {
+    font-size: 1.2em;
+    color: rgb(184, 184, 184);
+    background-color: rgb(150, 0, 0);
+}
+
+.single-post-links .edit:hover {
+    font-size: 1.2em;
+    color: black;
+    background-color: rgb(0, 158, 0);
+}
+
+.single-post-links .delete:hover {
+    font-size: 1.2em;
+    color: black;
+    background-color: rgb(216, 0, 0);
+}
+
+.page-current_page {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    background-color: rgb(77, 77, 77);
+    border-radius: 100px;
+}
+
+.page-list-items {
+    text-decoration: none;
+    padding: 5px;
+    background-color: rgb(44, 44, 44);
+    border-radius: 100px;
+}
+
+.page-current_page:hover {
+    color: white;
+}
+
+.page-list-items:hover {
+    color: white;
+}
+
+.pages-list {
+    margin-bottom: 10px;
+}
+
+.side-menu {
+    border: solid rgb(12, 12, 12) 1px;
+    color: rgb(206, 206, 206);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(22, 22, 22);
+    height: 100px;
+}

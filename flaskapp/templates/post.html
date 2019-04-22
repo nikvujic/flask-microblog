@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2 col-xs-12">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div style="color: white;">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <article class="media post">
+        <div class="post-img">
+            <img class="article-img" src="{{ url_for('static', filename='images/' + post.author.image_file) }}">
+        </div>
+        <div class="post-username">
+            <a class="" href="#">{{ post.author.username }}</a>
+        </div>
+        <div>
+            <small class="text-muted">{{ post.date_posted.strftime('%d. %m. %Y') }}</small>
+        </div>
+        <div class="post-content">
+            <h2>{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+        </div>
+        <div class="single-post-links">
+            <a href="#"><img class="article-img" src="{{ url_for('static', filename='resources/' + 'arrow-alt-up.png') }}"></a><span>0</span>
+            <a href="#"><img class="article-img" src="{{ url_for('static', filename='resources/' + 'arrow-alt-down.png') }}"></a><span>0</span>
+            {% if post.author == current_user %}
+                <a href="{{ url_for('update_post', post_id=post.id) }}" class="btn btn-secondary edit">Edit</a>
+                <a href="{{ url_for('delete_post', post_id=post.id) }}" class="btn btn-secondary delete">Delete</a>
+            {% endif %}
+        </div>
+    </article>
+</div>
+{% endblock content %}

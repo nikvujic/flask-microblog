@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+  
+  {% if title %}
+  <title>Flask App - {{ title }}</title>
+  {% else %}
+  <title>Flask App</title>
+  {% endif %}
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">FlaskMicroblog</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="#">Popular</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {% if current_user.is_authenticated %}
+          <li><a href="{{ url_for('account') }}"><span class="glyphicon glyphicon-user"></span> {{ current_user.username }}</a></li>
+          <li><a href="{{ url_for('create_post') }}"><span class="glyphicon glyphicon-pencil"></span> Post</a></li>
+          <li><a href="{{ url_for('logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        {% else %}
+          <li><a href="{{ url_for('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav> 
+    {% if jumbo %}
+      <div class="container">
+        <div class="col-md-1"></div>
+        <div class="jumbotron col-md-10">
+          <h1>[page in development]</h1>
+          <p>This part will be used for announcements (if there are any)</p>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    {% endif %}
+    <div class="container">
+      <div class="row">
+        {% if sidemenu %}
+        <div class="col-md-1"></div>
+          <div class="col-md-6">
+        {% else %}
+          <div class="col-md-8 col-md-offset-2">
+        {% endif %}
+            {% block content %}{% endblock %}
+          </div>
+        {% if sidemenu %}
+          <div class="col-md-4">
+            <div class="side-menu">
+              <p>ovde ide sporedni meni...</p>
+              <p>ovde mogu da stoje obavestenja, predlozi, reklame...</p>
+            </div>
+          </div>
+        {% endif %}
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
