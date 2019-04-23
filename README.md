@@ -15,6 +15,7 @@ After that you can run the app from run.py file:
 ```
 python run.py
 ```
+App will run on localhost:5000.
 
 ## Info on some modules
 
